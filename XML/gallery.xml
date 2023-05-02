@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<gallery>
+    <product>
+        <name>UTILITY VEST</name>
+        <price>79.95 EUR</price>
+        <image>../images/mans/5.jpg</image>
+        <ref>../men_UTILITY_VEST_BROWN/men_UTILITY_VEST_BROWN.html</ref>
+    </product>
+    <product>
+        <name>UTILITY VEST</name>
+        <price>49.95 EUR</price>
+        <image>../images/mans/6.jpg</image>
+        <ref>../men_UTILITY_VEST_LIGHT/men_UTILITY_VEST_LIGHT.html</ref>
+    </product>
+    <product>
+        <name>SLEEVELESS VEST</name>
+        <price>79.95 EUR</price>
+        <image>../images/mans/7.jpg</image>
+        <ref>../men_SLEEVELESS_VEST/men_SLEEVELESS_VEST.html</ref>
+    </product>
+    <product>
+        <name>TEXTURED VEST</name>
+        <price>79.95 EUR</price>
+        <image>../images/mans/8.jpg</image>
+        <ref>../men_TEXTURED_VEST/men_TEXTURED_VEST.html</ref>
+    </product>
+    <product>
+        <name>PARKA OVERSIZE</name>
+        <price>89.95 EUR</price>
+        <image>../images/mans/9.jpg</image>
+        <ref>../men_TECHNICAL_PARKA/men_TECHNICAL_PARKA.html</ref>
+    </product>
+    <product>
+        <name>HOODED JACKET</name>
+        <price>99.95 EUR</price>
+        <image>../images/mans/10.jpg</image>
+        <ref>../men_HOODED_JACKET/men_HOODED_JACKET.html</ref>
+    </product>
+    <product>
+        <name>TECHNICAL JACKET</name>
+        <price>59.95 EUR</price>
+        <image>../images/mans/11.jpg</image>
+        <ref>../men_TECHNICAL_JACKET/men_TECHNICAL_JACKET.html</ref>
+    </product>
+    <product>
+        <name>JACKET POCKETS</name>
+        <price>79.95 EUR</price>
+        <image>../images/mans/12.jpg</image>
+        <ref>../men_JACKET_POCKETS/men_JACKET_POCKETS.html</ref>
+    </product>
+</gallery>

@@ -1,0 +1,636 @@
+@font-face {
+    font-family: "MontseratExtraLight";
+    src: url('../fonts/Montserrat-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: "MontseratLight";
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: "MontseratRegular";
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: "MontseratSemiBold";
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "MontseratMedium";
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Rufina";
+    src: url('../fonts/Rufina-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar 
+{
+    display: none;
+}
+
+a,
+a:hover,
+a:active{
+    text-decoration: none; 
+    color:black;
+}
+
+main{
+    height: 291vh;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+@media (max-width:768px)  
+{
+    main{
+        height:390vh;
+    }
+}
+
+header
+{
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 100;
+    background: white;
+    height: 35px;
+    font-family: "MontseratLight";
+    width: 100%;
+
+    .desktop{
+    height:35px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .burger_icon{
+        display: none;
+    }
+    nav:nth-child(1){
+        display: none;
+    }
+    .sex {
+        font-size: 17px;
+        margin-left:10px;
+        .sex_menu{
+            display: inline-block;
+            list-style-type: none;
+            li{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    .logo{
+        .logo_menu{
+            list-style-type: none;
+            display: flex;
+
+            .text{
+                font-size:  20px;
+                font-family: "MontseratRegular" ;
+                letter-spacing: 0.8vw;
+            }
+            li{
+                display: inline-block;
+                margin: 0 0.1vw;
+            }
+        }
+    }
+    .information{
+        font-size: 13px;
+        margin-right: 2vw;
+        .information_menu{
+            display: inline-block;
+            list-style-type: none;
+            li:nth-child(1){
+                margin-right: 15vw;
+                font-size: 16px;
+                input {
+                    font-family: "MontseratRegular";
+                    width:10vw;
+                    max-width: 85px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    font-size: 16px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::placeholder{
+                        font-family: "MontseratLight";
+                        font-size:13px;
+                        color:black;
+                    }    
+                }   
+            }
+            li{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    header .desktop{
+        width:95vw;
+        margin:auto;
+        .burger_icon{
+            display: flex;
+            img{
+                width:25px;
+            }
+        }
+
+        .sex{
+            display: none;
+        }
+
+        .information
+        {
+            font-size:17px;
+            .information_menu>li:nth-child(1),
+            .information_menu>li:nth-child(2)
+            {
+                display: none;
+            }
+        }
+    }
+
+    header{
+        nav:nth-child(1){
+            padding-top: 10vh;
+            z-index: 10;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            height:100vh;
+            width: 100vw;
+            background: white;
+            box-shadow: inset -20px -14px 27px -26px #000000;
+            max-width: 0px;
+            left:-105%;
+
+            svg{
+                width:23px;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+
+            p{
+                font-family: "MontseratRegular";
+                font-size: 40px;
+                text-align: center;
+                letter-spacing: 3vw;
+            }
+
+            ul{
+                list-style-type: none;
+                margin-top: 10vh;
+                width:50%;
+                li{
+                    margin-bottom: 10vh;
+                    font-size: 20px;
+                    text-align: left;
+                }   
+            }
+        }
+
+        .active_menu{
+            left:0 !important;
+            max-width: 300px !important;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+}
+
+@media (max-width:768px)  
+{
+    .none_mobile
+    {
+        display: none;
+    }
+
+    .header
+    {
+        height:45px;
+        .logo{
+            margin:auto;
+        }
+
+        .burger_icon
+        {
+            display: block;
+            width:25px;
+            margin-left:5px;
+        }
+
+        .information
+        {
+            font-size: 15px;
+            .none_mobile
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+.main_mobile{
+    display: none;
+}
+
+@media (max-width:768px)  
+{
+    .main_mobile{
+        display:block;
+        font-family: "MontseratLight";
+        background: url('../images/images_index/grey_first.jpg');
+        background-size: cover ;
+        width:100vw;
+        height: 95.8vh;
+        div{
+            height: 20vh;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            p{
+                font-size: 4vh;
+                letter-spacing: 1vh;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.male_female_block
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: "MontseratRegular";
+    font-size: 3vw;
+    background: #d6d3d2;
+
+    .first_section
+    {
+        position: relative;
+
+        p
+        {
+            position: absolute;
+            top:20%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .second_section
+    {
+        position: relative;
+        font-size: 2.5vw;
+        font-family: "MontseratRegular";
+        letter-spacing: 20px;
+        opacity: 0.85;
+        p
+        {
+            position: absolute;
+            top:15%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .third_section
+    {
+        position: relative;
+
+        p
+        {
+            position: absolute;
+            top:20%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    div>img {
+        width:30vw;
+        //height:95.2vh;
+        height: 100vh;
+    }
+}
+
+@media (max-width:1000px)  
+{
+    .male_female_block
+    {
+        justify-content: flex-start;
+        .second_section img 
+        {
+            width:40vw;
+        }
+    }
+}
+
+@media (max-width:768px)  
+{
+.male_female_block
+{
+    display: block;
+    font-size: 5vh;
+    height:199.8vh;
+
+    .first_section
+    {
+        background: url('../images/images_index/man2.png');
+        background-size: cover;
+        margin-left:-5px;
+        width: 100vw;
+        height:99.8vh;
+        position: relative;
+        p
+        {
+            position: absolute;
+            top:20%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .third_section
+    {
+        position: relative;
+        background: url('../images/images_index/woman2.png');
+        //background-size: cover;
+        width: 100vw;
+        height:99.8vh;
+        p
+        {
+            position: absolute;
+            top:20%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    div>img {
+        width:100vw;
+    }
+}
+}
+
+
+.new_collection
+{
+    //height:95.4vh;
+    height: 100vh;
+    display: flex;
+
+    .text_information
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:60vw;
+        background: #EB9C3E;
+
+        .text
+        {
+                        width:40vw;
+            .join
+            {
+                width:30vw;
+                font-family: "MontseratLight";
+                font-size: 3vw;
+                letter-spacing: 1.7vw;
+                margin:5vh auto;
+                
+            }
+
+            .collection_name
+            {
+                font-size: 4vw;
+                font-family: "MontseratSemiBold";
+                letter-spacing:3.5vw;
+                margin-top: 5vh;
+            }
+
+            .description
+            {
+                margin:5vh auto;
+                font-size: 1.5vw;
+                width:30vw;
+                font-family: "MontseratExtraLight";
+                letter-spacing: 0.4vw;
+            }
+        }
+    }
+
+    .photo>img 
+    {
+        width:40vw;
+        //height:95.4vh;
+        height: 100vh;
+    }
+}
+
+@media (max-width:768px)  
+{
+.new_collection
+{
+    height: 100vh;
+
+    .text_information
+    {
+        width:100vw;
+        background: white;
+        align-items: normal;
+        background: url('../images/images_index/orange_second.jpg' );
+        background-size: cover;
+
+        .text
+        {
+            height:40vh;
+            width:80vw;
+            .join
+            {
+                width:60vw;
+                font-size: 6.5vw;
+            }
+
+            .collection_name
+            {
+                font-size:10vw;
+                letter-spacing: 5.5vw;
+            }
+
+            .description
+            {
+                width:60vw;
+                font-size: 15px;
+                letter-spacing: 0.9vw;
+                display: none;
+            }
+        }
+    }
+}
+}
+
+.black_white
+{
+    //height:95.3vh;
+    height: 100vh;
+    width:100.1vw;
+    
+    div 
+    {
+        position: relative;
+
+        img 
+        {
+            width:100vw;
+            //height:95.4vh;
+            height: 100vh;
+        }
+
+        .name
+        {
+            font-family: "MontseratMedium";
+            font-size: 2.5vw;
+            position: absolute;
+            top:5vh;
+            left:27vw;
+        }
+
+        .tagline
+        {
+            font-family: "MontseratExtraLight";
+            font-size: 1.5vw;
+            width:15vw;
+            letter-spacing: 5px;
+            position: absolute;
+            top:13vh;
+            right:20vw;
+        }
+    }
+}
+
+footer{
+    margin-top:20vh;
+    font-family: "MontseratLight";
+    font-size: 13px;
+
+    .newsletter
+    {
+        font-size: 25px;
+        letter-spacing: 25px * 0.25;
+        width:440px;
+        text-align: center;
+        margin: 15vh auto;
+    }
+
+    .social_networks
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        font-size: 16px;
+        letter-spacing: 4px;
+
+        li
+        {
+            display: inline-block;
+            margin: 0 0.1vw;
+        }
+    }
+
+    .connection
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vh;
+        font-size: 25px;
+        letter-spacing: 4px;
+        margin-bottom: 15vh;
+
+        li
+        {
+            display: inline-block;
+            margin: 0 5vw;
+        }
+    }
+}
+
+
+@media (max-width:768px)  
+{
+    footer{
+        width:100vw;
+        margin-top:20vh;
+        font-family: "MontseratLight";
+        font-size: 13px;
+    
+        .newsletter
+        {
+            font-size: 3vh;
+            letter-spacing: 3vh * 0.1;
+            width:60vw;
+            text-align: center;
+            margin: 7vh auto;
+        }
+    
+        .social_networks
+        {
+            margin-top: 2.5vh;
+            font-size: 2vh;
+            letter-spacing: 4px;
+    
+            li
+            {
+                display: inline-block;
+                margin: 0 0.1vw;
+            }
+        }
+    
+        .connection
+        {
+
+            margin-top: 5vh;
+            font-size: 2vh;
+            letter-spacing: 4px;
+            margin-bottom: 5vh;
+    
+            li
+            {
+                display: block;
+                margin: 3vh 1vw;
+            }
+        }
+    }
+}

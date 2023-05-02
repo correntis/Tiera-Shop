@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "MontseratExtraLight";
+    src: url('../fonts/Montserrat-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: "MontseratLight";
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: "MontseratRegular";
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: "MontseratSemiBold";
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "MontseratMedium";
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Rufina";
+    src: url('../fonts/Rufina-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar 
+{
+    display: none;
+}
+
+a,
+a:hover,
+a:active{
+    text-decoration: none; 
+    color:black;
+}
+
+main{
+    height: 291vh;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+@media (max-width:768px)  
+{
+    main{
+        height:390vh;
+    }
+}
+
+header
+{
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 100;
+    background: white;
+    height: 35px;
+    font-family: "MontseratLight";
+    width: 100%;
+
+    .desktop{
+    height:35px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .burger_icon{
+        display: none;
+    }
+    nav:nth-child(1){
+        display: none;
+    }
+    .sex {
+        font-size: 17px;
+        margin-left:10px;
+        .sex_menu{
+            display: inline-block;
+            list-style-type: none;
+            li{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    .logo{
+        .logo_menu{
+            list-style-type: none;
+            display: flex;
+
+            .text{
+                font-size:  20px;
+                font-family: "MontseratRegular" ;
+                letter-spacing: 0.8vw;
+            }
+            li{
+                display: inline-block;
+                margin: 0 0.1vw;
+            }
+        }
+    }
+    .information{
+        font-size: 13px;
+        margin-right: 2vw;
+        .information_menu{
+            display: inline-block;
+            list-style-type: none;
+            li:nth-child(1){
+                margin-right: 15vw;
+                font-size: 16px;
+                input {
+                    font-family: "MontseratRegular";
+                    width:10vw;
+                    max-width: 85px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    font-size: 16px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::placeholder{
+                        font-family: "MontseratLight";
+                        font-size:13px;
+                        color:black;
+                    }    
+                }   
+            }
+            li{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    header .desktop{
+        width:95vw;
+        margin:auto;
+        .burger_icon{
+            display: flex;
+            img{
+                width:25px;
+            }
+        }
+
+        .sex{
+            display: none;
+        }
+
+        .information
+        {
+            font-size:17px;
+            .information_menu>li:nth-child(1),
+            .information_menu>li:nth-child(2)
+            {
+                display: none;
+            }
+        }
+    }
+
+    header{
+        nav:nth-child(1){
+            padding-top: 10vh;
+            z-index: 10;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            height:100vh;
+            width: 100vw;
+            background: white;
+            box-shadow: inset -20px -14px 27px -26px #000000;
+            max-width: 0px;
+            left:-105%;
+
+            svg{
+                width:23px;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+
+            p{
+                font-family: "MontseratRegular";
+                font-size: 40px;
+                text-align: center;
+                letter-spacing: 3vw;
+            }
+
+            ul{
+                list-style-type: none;
+                margin-top: 10vh;
+                width:50%;
+                li{
+                    margin-bottom: 10vh;
+                    font-size: 20px;
+                    text-align: left;
+                }   
+            }
+        }
+
+        .active_menu{
+            left:0 !important;
+            max-width: 300px !important;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+}
+
+body {
+    overflow: hidden;
+}
+
+main{
+    width:100vw;
+    height:99.5vh;
+    background: url('../images/logn_page/1.jpg');
+    background-size:cover;
+    background-color: aqua;
+    font-family: 'MontseratRegular';
+    color: #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        opacity: 0.9;
+        max-width: 600px;
+        width:100vw;
+        padding: 40px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border: 2px solid #d9d9d9;
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: "MontseratExtraLight";
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: "MontseratLight";
+        }
+
+        input[type=text], input[type=email], input[type=password] {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #444444;
+            font-size: 16px;
+            font-weight: 400;
+            border-bottom: 1px solid rgb(192, 192, 192);
+        }
+
+        input[type=submit] {
+            font-family: "MontseratExtraLight";
+            letter-spacing: 0.5px;
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 16px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        input[type=submit]:hover {
+            background-color: #ffffff;
+            border:1px solid rgb(0, 0, 0);
+            color: #000000;
+
+            &:active {
+                background-color: #000000;
+                color: #ffffff;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+          
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 3px 2px #000000;
+        }
+    }
+}
+

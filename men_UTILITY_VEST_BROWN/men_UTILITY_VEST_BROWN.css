@@ -1,0 +1,21 @@
+.buy_menu .photo {
+  background: url("../images/mans-utility_west_brown/1.jpg");
+  background-size: cover;
+}
+
+.gallery .first_photo {
+  background: url("../images/mans-utility_west_brown/2.jpg");
+  background-size: cover;
+}
+.gallery .second_photo {
+  background: url("../images/mans-utility_west_brown/3.jpg");
+  background-size: cover;
+}
+.gallery .third_photo {
+  background: url("../images/mans-utility_west_brown/4.jpg");
+  background-size: cover;
+}
+.gallery .fourth_photo {
+  background: url("../images/mans-utility_west_brown/5.jpg");
+  background-size: cover;
+}

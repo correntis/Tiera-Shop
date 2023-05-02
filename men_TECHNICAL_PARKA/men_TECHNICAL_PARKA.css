@@ -1,0 +1,411 @@
+@font-face {
+  font-family: "MontseratExtraLight";
+  src: url("../fonts/Montserrat-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "MontseratLight";
+  src: url("../fonts/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "MontseratRegular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "MontseratSemiBold";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "MontseratMedium";
+  src: url("../fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Rufina";
+  src: url("../fonts/Rufina-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: white;
+  height: 35px;
+  font-family: "MontseratLight";
+  width: 100%;
+}
+header .desktop {
+  height: 35px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .burger_icon {
+  display: none;
+}
+header nav:nth-child(1) {
+  display: none;
+}
+header .sex {
+  font-size: 17px;
+  margin-left: 10px;
+}
+header .sex .sex_menu {
+  display: inline-block;
+  list-style-type: none;
+}
+header .sex .sex_menu li {
+  display: inline-block;
+  margin-left: 10px;
+}
+header .logo .logo_menu {
+  list-style-type: none;
+  display: flex;
+}
+header .logo .logo_menu .text {
+  font-size: 20px;
+  font-family: "MontseratRegular";
+  letter-spacing: 0.8vw;
+}
+header .logo .logo_menu li {
+  display: inline-block;
+  margin: 0 0.1vw;
+}
+header .information {
+  font-size: 13px;
+  margin-right: 2vw;
+}
+header .information .information_menu {
+  display: inline-block;
+  list-style-type: none;
+}
+header .information .information_menu li:nth-child(1) {
+  margin-right: 15vw;
+  font-size: 16px;
+}
+header .information .information_menu li:nth-child(1) input {
+  font-family: "MontseratRegular";
+  width: 10vw;
+  max-width: 85px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+}
+header .information .information_menu li:nth-child(1) input:focus {
+  outline: none;
+}
+header .information .information_menu li:nth-child(1) input::-moz-placeholder {
+  font-family: "MontseratLight";
+  font-size: 13px;
+  color: black;
+}
+header .information .information_menu li:nth-child(1) input::placeholder {
+  font-family: "MontseratLight";
+  font-size: 13px;
+  color: black;
+}
+header .information .information_menu li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  header .desktop {
+    width: 95vw;
+    margin: auto;
+  }
+  header .desktop .burger_icon {
+    display: flex;
+  }
+  header .desktop .burger_icon img {
+    width: 25px;
+  }
+  header .desktop .sex {
+    display: none;
+  }
+  header .desktop .information {
+    font-size: 17px;
+  }
+  header .desktop .information .information_menu > li:nth-child(1),
+  header .desktop .information .information_menu > li:nth-child(2) {
+    display: none;
+  }
+  header nav:nth-child(1) {
+    padding-top: 10vh;
+    z-index: 10;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    box-shadow: inset -20px -14px 27px -26px #000000;
+    max-width: 0px;
+    left: -105%;
+  }
+  header nav:nth-child(1) svg {
+    width: 23px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  header nav:nth-child(1) p {
+    font-family: "MontseratRegular";
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 3vw;
+  }
+  header nav:nth-child(1) ul {
+    list-style-type: none;
+    margin-top: 10vh;
+    width: 50%;
+  }
+  header nav:nth-child(1) ul li {
+    margin-bottom: 10vh;
+    font-size: 20px;
+    text-align: left;
+  }
+  header .active_menu {
+    left: 0 !important;
+    max-width: 300px !important;
+    transition: all 0.1s ease-in-out;
+  }
+}
+.buy_menu {
+  width: 90vw;
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid black;
+}
+.buy_menu .photo {
+  width: 50vw;
+  max-width: 375px;
+  height: 80vh;
+  background: url("../images/mans-parka_tecnical/1.jpg");
+  background-size: cover;
+}
+.buy_menu .information {
+  width: 40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.buy_menu .information p:nth-child(1) {
+  font-family: "MontseratRegular";
+  font-size: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.buy_menu .information p:nth-child(2) {
+  font-family: "MontseratRegular";
+  font-size: 23px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.buy_menu .information p:nth-child(3) {
+  width: 30%;
+  text-align: left;
+  font-family: "MontseratExtraLight";
+  font-size: 21px;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 350px;
+}
+.buy_menu .information button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 0.1em solid #1A1A1A;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: "MontseratRegular";
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.buy_menu .information button:disabled {
+  pointer-events: none;
+}
+.buy_menu .information button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.buy_menu .information button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .buy_menu {
+    flex-wrap: wrap;
+  }
+  .buy_menu .photo {
+    width: 400px;
+  }
+  .buy_menu .information {
+    width: 100%;
+    height: 90vh;
+  }
+  .buy_menu .information p:nth-child(1) {
+    font-size: 20px;
+  }
+  .buy_menu .information p:nth-child(2) {
+    font-size: 16px;
+    margin: -40px 0;
+  }
+}
+.gallery {
+  width: 100vw;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: auto;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+.gallery div {
+  width: 400px;
+  height: 700px;
+  background: black;
+}
+.gallery .first_photo {
+  background: url("../images/mans-parka_tecnical/2.jpg");
+  background-size: cover;
+}
+.gallery .second_photo {
+  background: url("../images/mans-parka_tecnical/3.jpg");
+  background-size: cover;
+}
+.gallery .third_photo {
+  background: url("../images/mans-parka_tecnical/4.jpg");
+  background-size: cover;
+}
+.gallery .fourth_photo {
+  background: url("../images/mans-parka_tecnical/5.jpg");
+  background-size: cover;
+}
+
+footer {
+  margin-top: -5vh;
+  font-family: "MontseratLight";
+  font-size: 13px;
+}
+footer .newsletter {
+  font-size: 25px;
+  letter-spacing: 6.25px;
+  width: 440px;
+  text-align: center;
+  margin: 15vh auto;
+}
+footer .social_networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+footer .social_networks li {
+  display: inline-block;
+  margin: 0 0.1vw;
+}
+footer .connection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  font-size: 25px;
+  letter-spacing: 4px;
+  margin-bottom: 15vh;
+}
+footer .connection li {
+  display: inline-block;
+  margin: 0 4vw;
+}
+
+@media (max-width: 768px) {
+  footer {
+    width: 100vw;
+    margin-top: 10vh;
+    font-family: "MontseratLight";
+    font-size: 13px;
+  }
+  footer .newsletter {
+    font-size: 3vh;
+    letter-spacing: 0.3vh;
+    width: 60vw;
+    text-align: center;
+    margin: 7vh auto;
+  }
+  footer .connection {
+    margin-top: 5vh;
+    font-size: 2vh;
+    letter-spacing: 4px;
+    margin-bottom: 5vh;
+  }
+  footer .connection li {
+    display: block;
+    margin: 3vh 1vw;
+  }
+}
+.input {
+  margin-top: 30px;
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #777;
+  padding: 0.2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.input:focus, .input:hover {
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  border-color: #222222;
+}
+.input::-moz-placeholder {
+  color: #777;
+}
+.input::placeholder {
+  color: #777;
+}
+.input:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s;
+}

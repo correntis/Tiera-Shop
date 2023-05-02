@@ -1,0 +1,21 @@
+.buy_menu .photo {
+  background: url("../images/mans-oxfort_shirt/1.jpg");
+  background-size: cover;
+}
+
+.gallery .first_photo {
+  background: url("../images/mans-oxfort_shirt/2.jpg");
+  background-size: cover;
+}
+.gallery .second_photo {
+  background: url("../images/mans-oxfort_shirt/3.jpg");
+  background-size: cover;
+}
+.gallery .third_photo {
+  background: url("../images/mans-oxfort_shirt/4.jpg");
+  background-size: cover;
+}
+.gallery .fourth_photo {
+  background: url("../images/mans-oxfort_shirt/5.jpg");
+  background-size: cover;
+}

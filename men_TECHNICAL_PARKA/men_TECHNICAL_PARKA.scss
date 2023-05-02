@@ -1,0 +1,449 @@
+@font-face {
+    font-family: "MontseratExtraLight";
+    src: url('../fonts/Montserrat-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: "MontseratLight";
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: "MontseratRegular";
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: "MontseratSemiBold";
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "MontseratMedium";
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Rufina";
+    src: url('../fonts/Rufina-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar 
+{
+    display: none;
+}
+
+a,
+a:hover,
+a:active{
+    text-decoration: none; 
+    color:black;
+}
+
+header
+{
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 100;
+    background: white;
+    height: 35px;
+    font-family: "MontseratLight";
+    width: 100%;
+
+    .desktop{
+    height:35px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .burger_icon{
+        display: none;
+    }
+
+    nav:nth-child(1){
+        display: none;
+    }
+
+    .sex {
+        font-size: 17px;
+        margin-left:10px;
+
+        .sex_menu{
+            display: inline-block;
+            list-style-type: none;
+
+            li{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .logo{
+        .logo_menu{
+            list-style-type: none;
+            display: flex;
+
+            .text{
+                font-size:  20px;
+                font-family: "MontseratRegular" ;
+                letter-spacing: 0.8vw;
+            }
+
+            li{
+                display: inline-block;
+                margin: 0 0.1vw;
+            }
+        }
+    }
+
+    .information{
+        font-size: 13px;
+        margin-right: 2vw;
+        .information_menu{
+            display: inline-block;
+            list-style-type: none;
+
+            li:nth-child(1){
+                margin-right: 15vw;
+                font-size: 16px;
+                input {
+                    font-family: "MontseratRegular";
+                    width:10vw;
+                    max-width: 85px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    font-size: 16px;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::placeholder{
+                        font-family: "MontseratLight";
+                        font-size:13px;
+                        color:black;
+                    }    
+                }   
+            }
+
+            li{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    header .desktop{
+        width:95vw;
+        margin:auto;
+        .burger_icon{
+            display: flex;
+            img{
+                width:25px;
+            }
+        }
+
+        .sex{
+            display: none;
+        }
+
+        .information
+        {
+            font-size:17px;
+            .information_menu>li:nth-child(1),
+            .information_menu>li:nth-child(2)
+            {
+                display: none;
+            }
+        }
+    }
+
+    header{
+        nav:nth-child(1){
+            padding-top: 10vh;
+            z-index: 10;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            height:100vh;
+            width: 100vw;
+            background: white;
+            box-shadow: inset -20px -14px 27px -26px #000000;
+            max-width: 0px;
+            left:-105%;
+
+            svg{
+                width:23px;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+
+            p{
+                font-family: "MontseratRegular";
+                font-size: 40px;
+                text-align: center;
+                letter-spacing: 3vw;
+            }
+
+            ul{
+                list-style-type: none;
+                margin-top: 10vh;
+                width:50%;
+                li{
+                    margin-bottom: 10vh;
+                    font-size: 20px;
+                    text-align: left;
+                }   
+            }
+        }
+
+        .active_menu{
+            left:0 !important;
+            max-width: 300px !important;
+            transition: all 0.1s ease-in-out;
+        }
+    }
+}
+
+.buy_menu{
+    width:90vw;
+    max-width:1050px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-bottom: 2px solid black;
+
+    .photo{
+        width:50vw;
+        max-width:375px;
+        height:80vh;
+        background: url('../images/mans-parka_tecnical/1.jpg');
+        background-size: cover;
+    }
+
+    .information{
+        width:40vw;
+        height:70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        p:nth-child(1){
+            font-family: "MontseratRegular";
+            font-size: 30px;
+            width: fit-content;
+        }
+        p:nth-child(2){
+            font-family: "MontseratRegular";
+            font-size: 23px;
+            width: fit-content;
+        }
+        p:nth-child(3){
+            width:30%;
+            text-align: left;
+            font-family: "MontseratExtraLight";
+            font-size: 21px;
+            width: fit-content;
+            max-width: 350px;
+        }
+
+        button {
+            appearance: none;
+            background-color: transparent;
+            border: 0.1em solid #1A1A1A;
+            border-radius: 0.9375em;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-family: "MontseratRegular";
+            padding: 1em 2.3em;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+
+            &:disabled {
+                pointer-events: none;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #1A1A1A;
+                box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+                transform: translateY(-2px);
+            }
+            &:active {
+                box-shadow: none;
+                transform: translateY(0);
+            }
+        } 
+    }
+}
+
+@media (max-width:768px)
+{
+    .buy_menu{
+        flex-wrap: wrap;
+        .photo{
+            width: 400px;
+        }
+
+        .information{
+            width:100%;
+            height: 90vh;
+            p:nth-child(1){
+                font-size: 20px;
+            }
+            p:nth-child(2){
+                font-size: 16px;
+                margin: -40px 0;
+            }
+        }
+    }
+}
+
+.gallery{
+    width:100vw;
+    max-width:900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    margin:auto;
+    justify-content: center;
+    border-bottom: 2px solid black;
+
+    div{
+        width:400px;
+        height:700px;
+        background: black;
+    }
+
+    .first_photo{background: url('../images/mans-parka_tecnical/2.jpg');background-size: cover;}
+    .second_photo{background: url('../images/mans-parka_tecnical/3.jpg');background-size: cover;}
+    .third_photo{background: url('../images/mans-parka_tecnical/4.jpg');background-size: cover;}
+    .fourth_photo{background: url('../images/mans-parka_tecnical/5.jpg');background-size: cover;}
+
+}
+
+footer{
+    margin-top:-5vh;
+    font-family: "MontseratLight";
+    font-size: 13px;
+
+    .newsletter
+    {
+        font-size: 25px;
+        letter-spacing: 25px * 0.25;
+        width:440px;
+        text-align: center;
+        margin: 15vh auto;
+    }
+
+    .social_networks
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        font-size: 16px;
+        letter-spacing: 4px;
+
+        li
+        {
+            display: inline-block;
+            margin: 0 0.1vw;
+        }
+    }
+
+    .connection
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vh;
+        font-size: 25px;
+        letter-spacing: 4px;
+        margin-bottom: 15vh;
+
+        li
+        {
+            display: inline-block;
+            margin: 0 4vw;
+        }
+    }
+}
+
+
+@media (max-width:768px)  
+{
+    footer{
+        width:100vw;
+        margin-top:10vh;
+        font-family: "MontseratLight";
+        font-size: 13px;
+    
+        .newsletter
+        {
+            font-size: 3vh;
+            letter-spacing: 3vh * 0.1;
+            width:60vw;
+            text-align: center;
+            margin: 7vh auto;
+        }    
+        .connection
+        {
+
+            margin-top: 5vh;
+            font-size: 2vh;
+            letter-spacing: 4px;
+            margin-bottom: 5vh;
+    
+            li
+            {
+                display: block;
+                margin: 3vh 1vw;
+            }
+        }
+    }
+}
+
+.input {
+    margin-top: 30px;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: #777;
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #0d0c22;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:focus, &:hover {
+        outline: none;
+        padding: .2rem 1rem;
+        border-radius: 1rem;
+        border-color: #222222;
+    }
+
+    &::placeholder {
+        color: #777;
+    }
+    &:focus::placeholder {
+        opacity: 0;
+        transition: opacity .3s;
+    }
+}   

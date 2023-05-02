@@ -1,0 +1,21 @@
+.buy_menu .photo {
+  background: url("../images/mans-lightweight_utility/1.jpg");
+  background-size: cover;
+}
+
+.gallery .first_photo {
+  background: url("../images/mans-lightweight_utility/2.jpg");
+  background-size: cover;
+}
+.gallery .second_photo {
+  background: url("../images/mans-lightweight_utility/3.jpg");
+  background-size: cover;
+}
+.gallery .third_photo {
+  background: url("../images/mans-lightweight_utility/4.jpg");
+  background-size: cover;
+}
+.gallery .fourth_photo {
+  background: url("../images/mans-lightweight_utility/5.jpg");
+  background-size: cover;
+}
